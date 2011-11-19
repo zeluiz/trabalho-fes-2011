@@ -1,0 +1,30 @@
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
+
+from sgfd.registros.models import *
+from django.contrib import admin
+
+
+# Classes Admin para personalizar o formulário admin
+class CategoriaAdmin(admin.ModelAdmin):
+	fields = ['nome_categoria', 'descricao_categoria']
+
+admin.site.register(Categoria, CategoriaAdmin)
+
+
+class ReceitaAdmin(admin.ModelAdmin):
+	fieldsets = [
+		('Informações Sobre a Receita', {'fields': ['nome_receita', 'descricao_receita', 'valor_receita']}),
+		('Data da Criação', {'fields': ['data_receita'], 'classes': ['collapse']}),
+	]
+
+admin.site.register(Receita, ReceitaAdmin)
+
+
+class DespesaAdmin(admin.ModelAdmin):
+	fieldsets = [
+		('Informações Sobre a Despesa', {'fields': ['nome_despesa', 'categoria', 'descricao_despesa', 'valor_despesa']}),
+		('Data da Criação', {'fields': ['data_despesa'], 'classes': ['collapse']}),
+	]
+
+admin.site.register(Despesa, DespesaAdmin) 
