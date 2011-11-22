@@ -1,0 +1,40 @@
+body {
+	font-family: 'Gentium Book Basic', sans-serif;
+	font-size: 15px;
+	font-weight: normal;
+	margin:0;
+	color: #333333;
+}
+
+#corpo {
+	/*border:1px solid green;*/
+	width:960px;
+	min-height:500px;
+	margin:0 auto;
+	text-align:center; /* "remédio" para o hack do IE */  
+	padding:20px;
+}
+
+
+#col-esquerda {
+    width:500px;
+    float:left;
+    min-height:200px;
+}
+
+#col-direita {
+    width: 450px;
+    float:right;
+}
+
+input {
+   -moz-border-radius: 5px 5px 5px 5px;
+   border-radius: 5px 5px 5px 5px;
+   display: inline-block;
+   font-size: 18px;
+   height: 30px;
+   margin: 0 0 0 45px;
+   padding: 8px;
+   width: 300px;
+}
+
